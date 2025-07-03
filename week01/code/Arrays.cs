@@ -13,7 +13,19 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-        return []; // replace this return statement with your own
+        // To solve this problem, we will:
+        //  create an array of doubles with the specified length.
+        //  iterate through the array indicies from 0 to length
+        //  for each index, the number will be multiplied by the index + 1
+        //  Return the value of the number after multiplying it by the index + 1
+
+        var result = new double[length];
+        for (int i = 0; i < length; i++)
+        {
+            result[i] = number * (i + 1);
+        }
+
+        return result; // replace this return statement with your own
     }
 
     /// <summary>
@@ -29,5 +41,27 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+
+        // To solve this problem, we will:
+        //  create a list to hold the rotated values
+        //  calculate the length of the list
+        //  then we will use a for loop to iterate through the list for each index in list we will use the modulo operator to find the new rotated position
+        //  Then we will use a for loop to copy the values of the rotated list back to the original data list
+
+
+        int length = data.Count;
+        var rotatedList = new List<int>(new int[length]);
+
+        for (int i = 0; i < length; i++)
+        {
+            int rotatedIndex = (i + amount) % length;
+            rotatedList[rotatedIndex] = data[i];
+           
+        }
+        
+        for (int i = 0; i < length; i++)
+        {
+            data[i] = rotatedList[i];
+        }
     }
 }
