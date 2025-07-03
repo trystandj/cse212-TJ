@@ -16,8 +16,8 @@ public static class Arrays
         // To solve this problem, we will:
         //  create an array of doubles with the specified length.
         //  iterate through the array indicies from 0 to length
-        //  for each index, the number will be multiplied by the index + 1
-        //  Return the value of the number after multiplying it by the index + 1
+        //  for each result index, the number will be multiplied by the index + 1
+        //  Return the value of the result after multiplying the number by the index + 1
 
         var result = new double[length];
         for (int i = 0; i < length; i++)
