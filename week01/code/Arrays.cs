@@ -45,7 +45,7 @@ public static class Arrays
         // To solve this problem, we will:
         //  create a list to hold the rotated values
         //  calculate the length of the list
-        //  then we will use a for loop to iterate throgh and calculate the new rotated index by adding the amount to the current index and
+        //  then we will use a for loop to iterate throgh and calculate the new rotated index by adding the 'amount' to the current index and
         //  using the modulo operator with the length of the list. Then we will move the data list into a new position in the rotated list.
         //  Then we will use a for loop to copy the values of the rotated list back to the original data list
 
