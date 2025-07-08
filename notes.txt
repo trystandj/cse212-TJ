@@ -1,0 +1,32 @@
+A stack is a data structure that is characterized by the order in which items are added or removed. often called last in, first out, or lifo
+Each time you add something its called a push operation
+when we take a object off its called pop operationwe push and pop from the back of the stack 
+removing from the middle of the stack is not generally allowed. 
+The real beneifit of the stack is the ability to remember where we have beneifit
+
+One common example is the control z or undo
+when you type you push to the stack, then cntrol z pops the last one from the back
+
+Stacks are useful when we need to maintain history and perform an operation 
+for example undo function in an editor backwards 
+
+1 13 17
+
+
+Grocery Story Queue
+In the example below, we can see a line at a busy grocery store used 
+to represent a queue. The person next in line for the cashier is called
+the front and the person at the end of the line is called the back. When 
+the person at the front is removed from the queue we call this a dequeue operation. When a new person joins the queue 
+at the back, we call this an enqueue operation. Note that someone cannot cheat and enter the line in the middle of the queue.
+
+Some variables are called multiple times or at the same time. One solution to protect the code that is writing to the shared dataso that only one 
+process can change the variable at a time. A queue is used to ensure order and integrity. 
+when a process wants to write, it is enqueued. 
+when a process is dequeued it is then allowed to modify the shared variable when the process is done
+the next process is dequeued. 
+
+        18 19 20 
+
+Be mindful of how the data is being entered to the stack when debugging or udnerstanding the code
+The data could be flowing normally or in reverse 
