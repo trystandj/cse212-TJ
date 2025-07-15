@@ -24,7 +24,20 @@ public class Translator
     /// <returns>fixed array of divisors</returns>
     public void AddWord(string fromWord, string toWord)
     {
+
         // ADD YOUR CODE HERE
+        if (string.IsNullOrEmpty(fromWord) || string.IsNullOrEmpty(toWord))
+        {
+            throw new ArgumentException("Both fromWord and toWord must be non-empty strings.");
+        }
+        if (_words.ContainsKey(fromWord))
+        {
+            throw new ArgumentException($"The word '{fromWord}' is already added.");
+        }
+        _words[fromWord] = toWord;
+        Console.WriteLine($"Added translation: {fromWord} -> {toWord}");
+
+
     }
 
     /// <summary>
@@ -35,6 +48,15 @@ public class Translator
     public string Translate(string fromWord)
     {
         // ADD YOUR CODE HERE
-        return "";
+        if (string.IsNullOrEmpty(fromWord))
+        {
+            throw new ArgumentException("fromWord must be a non-empty string.");
+        }
+        if (_words.TryGetValue(fromWord, out var toWord))
+        {
+            return toWord;
+        }
+        return "???";
+        
     }
 }
