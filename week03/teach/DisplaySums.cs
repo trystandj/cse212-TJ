@@ -28,6 +28,29 @@
     /// </summary>
     /// <param name="numbers">array of integers</param>
     private static void DisplaySumPairs(int[] numbers) {
-        // TODO Problem 2 - This should print pairs of numbers in the given array
+         Dictionary<int, bool> seenNumbers = new Dictionary<int, bool>();
+         foreach (int currentNumber in numbers)
+        {
+            int complement = 10 - currentNumber;
+
+            if (seenNumbers.ContainsKey(complement))
+            {
+                // Found a pair!
+                if (currentNumber < complement)
+                {
+                    Console.WriteLine($"({currentNumber}, {complement})");
+                }
+                else
+                {
+                    Console.WriteLine($"({complement}, {currentNumber})");
+                }
+            }
+            // Add the current number to the dictionary.
+            // We use .TryAdd() to prevent exceptions if the number is already there
+            // (though problem states no duplicates in input, it's good practice).
+            seenNumbers.TryAdd(currentNumber, true);
+        }
+
+
     }
 }
